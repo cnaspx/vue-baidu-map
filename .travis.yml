@@ -16,8 +16,8 @@ script:
   # - npm test
   - npm run build
 after_script:
-  - cp ./docs/favicon.png ./dist/
-  - cd dist
+  # - cp ./docs/favicon.png ./dist/
+  # - cd dist
   - git init
   - git config user.name "cnaspx"
   - git config user.email "feelsky@163.com"
