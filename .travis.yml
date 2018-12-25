@@ -16,11 +16,11 @@ script:
   # - npm test
   - npm run build
 after_script:
-  # - cp ./docs/favicon.png ./dist/
-  - cd ./
+  - cp index.js ./docs/
+  - cd docs
   - git init
   - git config user.name "cnaspx"
   - git config user.email "feelsky@163.com"
   - git add .
   - git commit -m "Travis build"
-  - git push  --force --quiet "https://ec95d4e4c76a80ddc9d7e5a16772a2cfdf3fbd6d@github.com/cnaspx/vue-baidu-map.git" master:gh-pages
+  - git push  --force --quiet "https://${GH_TOKEN}@github.com/cnaspx/vue-baidu-map.git" master:gh-pages
