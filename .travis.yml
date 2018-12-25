@@ -23,4 +23,4 @@ after_script:
   - git config user.email "feelsky@163.com"
   - git add .
   - git commit -m "Travis build"
-  - git push  --force --quiet "https://d7d827fd2e46257c24446236ec5316ee8d7da39e@github.com/cnaspx/vue-baidu-map.git" master:gh-pages
+  - git push  --force --quiet "https://${GH_TOKEN}@github.com/cnaspx/vue-baidu-map.git" master:gh-pages
