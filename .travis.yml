@@ -17,12 +17,13 @@ script:
   - npm run build
 after_script:
  - cd "$TRAVIS_BUILD_DIR"
+ - cp index.js ./docs/
     # This generates a `web` directory containing the website.
- - make web
- - cd web
+ #- make web
+ #- cd web
  - git init
- - git checkout -b master
+ #- git checkout -b master
  - git add .
- - git -c user.name='cnaspx' -c user.email='feelsky@163.com' commit -m init
+ - git -c user.name='cnaspx' -c user.email='feelsky@163.com' commit -m 'Travis Build'
 
- - git push -f https://cnaspx:$GH_TOKEN@github.com/cnaspx/vue-baidu-map-master master &>/dev/null
+ - git push -f https://cnaspx:$GH_TOKEN@github.com/cnaspx/vue-baidu-map master:master
